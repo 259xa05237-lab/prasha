@@ -1,0 +1,388 @@
+/* ==========================================================================
+   MECHANICAL ENGINEERING DETAIL: PERPETUAL LOVE ENGINE & BLUEPRINT
+   Chapter 03: "The Perpetual Engine of Love"
+   ========================================================================== */
+
+.chapter-bg-blueprint {
+  position: relative;
+  background: transparent;
+}
+
+.blueprint-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 85%);
+  pointer-events: none;
+}
+
+.mechanical-showcase-box {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  border-radius: 16px;
+  padding: 3.5rem 2.5rem;
+  background: rgba(14, 24, 46, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45), inset 0 0 40px rgba(212, 175, 55, 0.08);
+}
+
+/* Blueprint Corner Drafting Marks */
+.blueprint-corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-color: var(--color-gold);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.blueprint-corner.tl { top: -2px; left: -2px; border-width: 3px 0 0 3px; border-top-left-radius: 14px; }
+.blueprint-corner.tr { top: -2px; right: -2px; border-width: 3px 3px 0 0; border-top-right-radius: 14px; }
+.blueprint-corner.bl { bottom: -2px; left: -2px; border-width: 0 0 3px 3px; border-bottom-left-radius: 14px; }
+.blueprint-corner.br { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; border-bottom-right-radius: 14px; }
+
+/* Telemetry Header */
+.blueprint-tech-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding-bottom: 1.2rem;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+}
+
+.telemetry-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.draft-tag {
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--color-gold-deep);
+}
+
+.telemetry-val {
+  font-family: var(--font-serif-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.draft-title {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #FFFFFF;
+}
+
+.telemetry-sub {
+  font-size: 0.72rem;
+  color: var(--color-gold-light);
+}
+
+.status-indicator {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+}
+
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulseGreen 1.5s infinite;
+}
+
+@keyframes pulseGreen {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.draft-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #6EE7B7;
+}
+
+/* Transmission Stage */
+.gears-interactive-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 320px;
+  margin: 1.5rem 0 2rem;
+  cursor: grab;
+  user-select: none;
+}
+
+.gears-interactive-stage:active {
+  cursor: grabbing;
+}
+
+/* Auxiliary Top Pinion */
+.top-pinion-wrap {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+}
+
+.pinion-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+  will-change: transform;
+}
+
+/* Main Gear Wrappers */
+.gear-wrapper {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.gear-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.35));
+  will-change: transform;
+}
+
+.prajwal-gear-wrap {
+  margin-right: -28px; /* Precision Meshing Offset */
+  z-index: 2;
+}
+
+.sharun-gear-wrap {
+  margin-left: -28px;
+  z-index: 2;
+}
+
+/* Central Mechanical Heart Engine Core */
+.mechanical-heart-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.heart-pulse-glow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 63, 94, 0.4) 0%, transparent 70%);
+  animation: heartPulseAura 1.8s infinite ease-in-out;
+}
+
+@keyframes heartPulseAura {
+  0%, 100% { transform: scale(0.9); opacity: 0.4; }
+  50% { transform: scale(1.3); opacity: 0.8; }
+}
+
+.engine-heart-symbol {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 12px rgba(244, 63, 94, 0.7));
+  will-change: transform;
+}
+
+.engine-heart-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Connecting Linkage Rods */
+.connecting-rod {
+  position: absolute;
+  width: 55px;
+  height: 4px;
+  background: linear-gradient(90deg, #FDE68A, #D4AF37);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.rod-left {
+  right: 48px;
+  top: 38px;
+  transform-origin: right center;
+}
+
+.rod-right {
+  left: 48px;
+  top: 38px;
+  transform-origin: left center;
+}
+
+/* Mesh Point Spark */
+.mesh-point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.mesh-point.sparking {
+  opacity: 1;
+}
+
+.sparkle-core {
+  color: #FFF3C4;
+  font-size: 1.6rem;
+  text-shadow: 0 0 15px #FFF, 0 0 25px var(--color-gold);
+}
+
+/* Live Engine Controls & Telemetry Grid */
+.engine-controls-card {
+  background: rgba(8, 14, 28, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.engine-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: var(--color-gold-deep);
+  text-transform: uppercase;
+}
+
+.stat-val {
+  font-family: var(--font-serif-title);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.stat-val small {
+  font-size: 0.75rem;
+  color: var(--color-gold-light);
+}
+
+/* Speed Modes Buttons */
+.speed-modes-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.speed-mode-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #E2E8F0;
+  padding: 0.55rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.speed-mode-btn:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--color-gold);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.speed-mode-btn.active {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-deep));
+  border-color: var(--color-gold-light);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px var(--color-gold-glow);
+}
+
+.mechanical-statement {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.eng-line-1, .eng-line-2, .eng-line-3 {
+  font-family: var(--font-serif-title);
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  letter-spacing: 2px;
+  line-height: 1.8;
+  color: #FFFFFF;
+}
+
+.eng-line-3 {
+  color: var(--color-gold-light);
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.technical-dimension-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--color-gold-light);
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  padding-top: 1.2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}

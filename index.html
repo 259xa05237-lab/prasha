@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jammula Prajwal Sai & Sharun — Wedding Celebration & Journey</title>
+  <meta name="description" content="Celebrating the love and wedding of Jammula Prajwal Sai & Sharun. From Mechanical Engineering at G. Pulla Reddy Engineering College to their beautiful Church Wedding in Pondicherry.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+
+  <!-- Google Fonts: Luxury Serif, Handwritten & Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gears.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="luxury-theme">
+
+  <!-- Premium Animated Mesh & Aura Shimmer Layer -->
+  <div class="luxury-animated-bg" aria-hidden="true">
+    <div class="luxury-mesh-gradient"></div>
+    <div class="luxury-aura-orb aura-1"></div>
+    <div class="luxury-aura-orb aura-2"></div>
+    <div class="luxury-aura-orb aura-3"></div>
+    <div class="luxury-golden-shimmer-lines"></div>
+  </div>
+
+  <!-- Particle & Ambient Canvas -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Audio Floating Player -->
+  <div class="audio-widget" id="audio-widget" title="Wedding Ambient Melody">
+    <button class="audio-btn" id="audio-toggle-btn" aria-label="Toggle ambient wedding music">
+      <span class="audio-icon">♫</span>
+      <span class="audio-status-dot" id="audio-status-dot"></span>
+    </button>
+    <div class="audio-dropdown" id="audio-dropdown">
+      <div class="audio-info">
+        <span class="audio-title">"Forever in Harmony"</span>
+        <span class="audio-subtitle">Romantic Acoustic Ambient</span>
+      </div>
+      <div class="audio-controls">
+        <button id="audio-play-pause-btn" class="ctrl-btn">Play Melody</button>
+        <div class="volume-slider-wrap">
+          <label for="audio-volume" class="sr-only">Volume</label>
+          <span class="vol-icon">🔉</span>
+          <input type="range" id="audio-volume" min="0" max="1" step="0.05" value="0.5">
+          <span class="vol-icon">🔊</span>
+        </div>
+      </div>
+      <div class="custom-audio-opt">
+        <label for="custom-audio-upload" class="custom-audio-label">✦ Play Custom MP3 Track</label>
+        <input type="file" id="custom-audio-upload" accept="audio/*" class="sr-only">
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Chapter Indicator -->
+  <aside class="chapter-tracker" id="chapter-tracker" aria-label="Story Chapters">
+    <div class="chapter-badge" id="chapter-badge">Chapter 01</div>
+    <ul class="chapter-dots">
+      <li data-target="hero" class="active" title="Prologue"><span class="dot"></span><span class="c-label">Prologue</span></li>
+      <li data-target="chapter-beginning" title="Chapter 01: The Beginning"><span class="dot"></span><span class="c-label">01 Beginning</span></li>
+      <li data-target="chapter-conversations" title="Chapter 02: Conversations"><span class="dot"></span><span class="c-label">02 Conversations</span></li>
+      <li data-target="chapter-connection" title="Chapter 03: Connection"><span class="dot"></span><span class="c-label">03 Connection</span></li>
+      <li data-target="chapter-journey" title="Chapter 04: The Journey"><span class="dot"></span><span class="c-label">04 Timeline</span></li>
+      <li data-target="chapter-memories" title="Chapter 05: Memories"><span class="dot"></span><span class="c-label">05 Memories</span></li>
+      <li data-target="chapter-wedding" title="Chapter 06: The Wedding"><span class="dot"></span><span class="c-label">06 Celebration</span></li>
+      <li data-target="chapter-forever" title="Chapter 07: Forever"><span class="dot"></span><span class="c-label">07 Forever</span></li>
+    </ul>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">P & S</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#chapter-beginning" class="nav-link">Our Story</a>
+        <a href="#chapter-conversations" class="nav-link">The Spark</a>
+        <a href="#chapter-connection" class="nav-link">Engineered Love</a>
+        <a href="#chapter-journey" class="nav-link">Timeline</a>
+        <a href="#chapter-memories" class="nav-link">Memories</a>
+        <a href="#chapter-wedding" class="nav-link">Wedding Details</a>
+        <a href="#rsvp-section" class="nav-link nav-link-highlight">RSVP</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================================================== -->
+  <!-- 2. HERO SECTION -->
+  <!-- ================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="floral-crest-top">
+        <svg viewBox="0 0 100 30" class="golden-crest-svg" aria-hidden="true">
+          <path d="M50 25 C40 10 20 20 5 15 C18 5 38 12 50 2 C62 12 82 5 95 15 C80 20 60 10 50 25 Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="50" cy="8" r="2.5" fill="currentColor"/>
+          <circle cx="35" cy="14" r="1.5" fill="currentColor"/>
+          <circle cx="65" cy="14" r="1.5" fill="currentColor"/>
+        </svg>
+      </div>
+
+      <p class="hero-pretitle">THE CELEBRATION OF LOVE</p>
+
+      <div class="couple-names-wrap">
+        <h1 class="groom-name">JAMMULA PRAJWAL SAI</h1>
+        <div class="hero-heart-divider">
+          <span class="golden-line left"></span>
+          <div class="infinity-heart" aria-label="Infinity Love">
+            <svg viewBox="0 0 60 30" class="infinity-svg">
+              <path class="inf-path" d="M15 15 C5 5, 0 15, 15 25 C30 35, 30 -5, 45 5 C60 15, 55 25, 45 25 C30 25, 30 -5, 15 15 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="heart-symbol">❤️</span>
+          </div>
+          <span class="golden-line right"></span>
+        </div>
+        <h1 class="bride-name">SHARUN</h1>
+      </div>
+
+      <p class="hero-tagline">“Two Hearts. One Journey. One Forever.”</p>
+
+      <div class="hero-wedding-date-pill">
+        <span class="date-pill-icon">✨</span>
+        <span class="date-pill-text">DECEMBER 25, 2026 • PONDICHERRY</span>
+        <span class="date-pill-icon">✨</span>
+      </div>
+
+      <div class="journey-badge">
+        <div class="badge-point from">
+          <span class="point-label">FROM</span>
+          <span class="point-value">G. Pulla Reddy Engineering College</span>
+        </div>
+        <div class="badge-arrow">
+          <span>⟶</span>
+        </div>
+        <div class="badge-point to">
+          <span class="point-label">TO</span>
+          <span class="point-value">A Beautiful Beginning in Pondicherry</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#chapter-beginning" class="btn btn-luxury-primary">
+          <span>OUR STORY</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor"><path d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"/></svg>
+        </a>
+        <a href="#chapter-wedding" class="btn btn-luxury-outline">
+          <span>WEDDING DETAILS</span>
+        </a>
+      </div>
+
+      <div class="scroll-down-indicator">
+        <span class="scroll-text">Scroll to Begin the Journey</span>
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================== -->
+  <!-- CHAPTER 01: THE BEGINNING (4. THEIR STORY) -->
+  <!-- ================================================== -->
+  <section id="chapter-beginning" class="story-chapter-section chapter-bg-warm">
+    <div class="chapter-container">
+      
+      <div class="chapter-header">
+        <span class="chapter-num">CHAPTER 01</span>
+        <h2 class="chapter-title">Where It All Began</h2>
+        <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+      </div>
+
+      <div class="story-college-badge">
+        <div class="college-icon-wrap">
+          <svg class="college-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="college-name">G. Pulla Reddy Engineering College</h3>
+        <p class="branch-pill">Mechanical Engineering</p>
+      </div>
+
+      <div class="poetic-story-card glass-panel">
+        <p class="story-intro">
+          “Some stories begin with a grand moment.<br>
+          Theirs began with simple conversations, shared college days and an unexpected connection.”
+        </p>
+
+        <div class="story-progression">
+          <div class="step-card" data-step="1">
+            <span class="step-icon">🚶‍♂️ 🚶‍♀️</span>
+            <p>“At first, they were simply two students walking their own paths.”</p>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-card" data-step="2">
+            <span class="step-icon">💬</span>
+            <p>“Then came conversations.”</p>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-card" data-step="3">
+            <span class="step-icon">🤝</span>
+            <p>“Conversations became friendship.”</p>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-card" data-step="4">
+            <span class="step-icon">✨</span>
+            <p>“Friendship became understanding.”</p>
+          </div>
+        </div>
+
+        <p class="story-climax">
+          “And somewhere between ordinary college days and unforgettable moments, they found something extraordinary.”
+        </p>
+
+        <div class="story-conclusion-quote">
+          <div class="quote-mark">“</div>
+          <p class="quote-text">
+            They didn't just find love.<br>
+            They found a person with whom they wanted to build the rest of their story.
+          </p>
+          <div class="quote-author">— Prajwal & Sharun</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================== -->
+  <!-- CHAPTER 02: THE CONVERSATION MOMENT (5.) -->
+  <!-- ================================================== -->
+  <section id="chapter-conversations" class="story-chapter-section chapter-bg-ivory">
+    <div class="chapter-container">
+      
+      <div class="chapter-header">
+        <span class="chapter-num">CHAPTER 02</span>
+        <h2 class="chapter-title">Some Conversations Change Everything</h2>
+        <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+        <p class="chapter-subtitle">A glimpse into how two engineers began talking across college corridors</p>
+      </div>
+
+      <div class="chat-experience-card glass-panel">
+        <div class="chat-screen-header">
+          <div class="chat-header-info">
+            <span class="avatar prajwal-avatar">P</span>
+            <span class="chat-with">Prajwal Sai</span>
+            <span class="chat-status"></span>
+            <span class="chat-and">&amp;</span>
+            <span class="avatar sharun-avatar">S</span>
+            <span class="chat-with">Sharun</span>
+          </div>
+          <button class="replay-chat-btn" id="replay-chat-btn" title="Replay Conversation">
+            <span>↺ Replay Moments</span>
+          </button>
+        </div>
+
+        <div class="chat-message-stream" id="chat-stream">
+          <!-- Chat bubbles populated dynamically or staged via JS -->
+          <div class="chat-bubble left prajwal msg-item" data-index="0">
+            <div class="bubble-author">Prajwal</div>
+            <div class="bubble-content">Hi…</div>
+            <span class="msg-time">College Days</span>
+          </div>
+
+          <div class="chat-bubble right sharun msg-item" data-index="1">
+            <div class="bubble-author">Sharun</div>
+            <div class="bubble-content">Hey! 😊</div>
+            <span class="msg-time">Just then</span>
+          </div>
+
+          <div class="chat-bubble left prajwal msg-item" data-index="2">
+            <div class="bubble-author">Prajwal</div>
+            <div class="bubble-content">Did you complete the CAD drawing assignment for tomorrow's lab?</div>
+            <span class="msg-time">Later that evening</span>
+          </div>
+
+          <div class="chat-bubble right sharun msg-item" data-index="3">
+            <div class="bubble-author">Sharun</div>
+            <div class="bubble-content">Almost! Working on the gear teeth projection right now. How's yours coming along? 📐</div>
+            <span class="msg-time">A few mins later</span>
+          </div>
+
+          <div class="chat-bubble left prajwal msg-item" data-index="4">
+            <div class="bubble-author">Prajwal</div>
+            <div class="bubble-content">Just finished! Let's review it together tomorrow during the break?</div>
+            <span class="msg-time">Night</span>
+          </div>
+
+          <div class="chat-bubble right sharun msg-item" data-index="5">
+            <div class="bubble-author">Sharun</div>
+            <div class="bubble-content">Sounds great! See you near the mechanical block! ✨</div>
+            <span class="msg-time">With a smile</span>
+          </div>
+        </div>
+
+        <div class="typing-status" id="typing-indicator" style="display: none;">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-text">Memory typing...</span>
+        </div>
+
+        <div class="chat-footer-message">
+          <p class="highlight-memory">
+            “What started as a simple conversation became the beginning of something beautiful.”
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================== -->
+  <!-- CHAPTER 03: MECHANICAL ENGINEERING LOVE ENGINE -->
+  <!-- ================================================== -->
+  <section id="chapter-connection" class="story-chapter-section chapter-bg-blueprint">
+    <div class="blueprint-overlay"></div>
+    <div class="chapter-container">
+      
+      <div class="chapter-header light-text">
+        <span class="chapter-num gold-text">CHAPTER 03</span>
+        <h2 class="chapter-title">The Perpetual Engine of Love</h2>
+        <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+        <p class="chapter-subtitle">Engineered from CAD labs to eternity • Operating with zero friction and infinite torque</p>
+      </div>
+
+      <!-- Mechanical Love Engine Blueprint Showcase -->
+      <div class="mechanical-showcase-box glass-panel-dark">
+        <div class="blueprint-corner tl"></div>
+        <div class="blueprint-corner tr"></div>
+        <div class="blueprint-corner bl"></div>
+        <div class="blueprint-corner br"></div>
+
+        <!-- Telemetry & Live Status Dashboard -->
+        <div class="blueprint-tech-header">
+          <div class="telemetry-item">
+            <span class="draft-tag">SPECIFICATION</span>
+            <span class="telemetry-val">LOVE-MECH-2026</span>
+          </div>
+          <div class="telemetry-item">
+            <span class="draft-title">G. PULLA REDDY ENGINEERING COLLEGE</span>
+            <span class="telemetry-sub">Mechanical Engineering R&amp;D</span>
+          </div>
+          <div class="telemetry-item status-indicator">
+            <span class="status-pulse-dot"></span>
+            <span class="draft-status" id="engine-status-text">RUNNING // SYNCHRONIZED</span>
+          </div>
+        </div>
+
+        <!-- Live Running Mechanical Transmission Stage -->
+        <div class="gears-interactive-stage" id="gears-stage" title="Click or drag to crank the Mechanical Love Engine">
+          
+          <!-- Auxiliary Top Pinion: Love Balance -->
+          <div class="pinion-wrapper top-pinion-wrap" id="top-pinion-wrap">
+            <svg class="pinion-svg" id="top-pinion" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="38" stroke="#FDE68A" stroke-width="2" fill="rgba(212, 175, 55, 0.15)"/>
+              <circle cx="50" cy="50" r="14" stroke="#FDE68A" stroke-width="1.5" fill="rgba(212, 175, 55, 0.3)"/>
+              <line x1="50" y1="12" x2="50" y2="88" stroke="#FDE68A" stroke-width="1.5"/>
+              <line x1="12" y1="50" x2="88" y2="50" stroke="#FDE68A" stroke-width="1.5"/>
+              <circle cx="50" cy="50" r="4" fill="#FFFFFF"/>
+            </svg>
+          </div>
+
+          <!-- Left Driver Gear: Prajwal -->
+          <div class="gear-wrapper prajwal-gear-wrap" id="prajwal-gear-wrap">
+            <svg class="gear-svg" id="prajwal-gear" viewBox="0 0 200 200">
+              <defs>
+                <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFF3C4"/>
+                  <stop offset="50%" stop-color="#E5B842"/>
+                  <stop offset="100%" stop-color="#9A7414"/>
+                </linearGradient>
+              </defs>
+              <g class="gear-teeth-group" stroke="url(#goldGrad1)" stroke-width="2.2" fill="none">
+                <circle cx="100" cy="100" r="74" stroke="url(#goldGrad1)" stroke-width="3" fill="rgba(229, 184, 66, 0.1)"/>
+                <circle cx="100" cy="100" r="54" stroke="url(#goldGrad1)" stroke-width="1.5" stroke-dasharray="5,4"/>
+                <circle cx="100" cy="100" r="30" stroke="url(#goldGrad1)" stroke-width="2" fill="rgba(229, 184, 66, 0.25)"/>
+                <!-- Spoke Arms -->
+                <line x1="100" y1="26" x2="100" y2="174" stroke="url(#goldGrad1)" stroke-width="2"/>
+                <line x1="26" y1="100" x2="174" y2="100" stroke="url(#goldGrad1)" stroke-width="2"/>
+                <line x1="48" y1="48" x2="152" y2="152" stroke="url(#goldGrad1)" stroke-width="1.5"/>
+                <line x1="48" y1="152" x2="152" y2="48" stroke="url(#goldGrad1)" stroke-width="1.5"/>
+                <!-- 16 Precision Meshing Teeth -->
+                <path d="M 93 10 L 107 10 L 105 28 L 95 28 Z" fill="url(#goldGrad1)"/>
+                <path d="M 132 18 L 144 26 L 134 42 L 124 34 Z" fill="url(#goldGrad1)"/>
+                <path d="M 163 41 L 171 53 L 155 63 L 147 51 Z" fill="url(#goldGrad1)"/>
+                <path d="M 182 76 L 186 90 L 168 94 L 164 80 Z" fill="url(#goldGrad1)"/>
+                <path d="M 186 110 L 182 124 L 164 120 L 168 106 Z" fill="url(#goldGrad1)"/>
+                <path d="M 171 147 L 163 159 L 147 149 L 155 137 Z" fill="url(#goldGrad1)"/>
+                <path d="M 144 174 L 132 182 L 124 166 L 134 158 Z" fill="url(#goldGrad1)"/>
+                <path d="M 107 190 L 93 190 L 95 172 L 105 172 Z" fill="url(#goldGrad1)"/>
+                <path d="M 68 182 L 56 174 L 66 158 L 76 166 Z" fill="url(#goldGrad1)"/>
+                <path d="M 37 159 L 29 147 L 45 137 L 53 149 Z" fill="url(#goldGrad1)"/>
+                <path d="M 18 124 L 14 110 L 32 106 L 36 120 Z" fill="url(#goldGrad1)"/>
+                <path d="M 14 90 L 18 76 L 36 80 L 32 94 Z" fill="url(#goldGrad1)"/>
+                <path d="M 29 53 L 37 41 L 53 51 L 45 63 Z" fill="url(#goldGrad1)"/>
+                <path d="M 56 26 L 68 18 L 76 34 L 66 42 Z" fill="url(#goldGrad1)"/>
+              </g>
+              <circle cx="100" cy="100" r="16" fill="#0A1633" stroke="#FDE68A" stroke-width="2"/>
+              <text x="100" y="104" text-anchor="middle" fill="#FDE68A" font-family="'Cinzel', serif" font-size="11" font-weight="bold">PRAJWAL</text>
+            </svg>
+          </div>
+
+          <!-- Central Pulsing Mechanical Heart Core & Linkage Rods -->
+          <div class="mechanical-heart-core" id="mechanical-heart-core">
+            <div class="heart-pulse-glow"></div>
+            <!-- Animated Linkage Crankshaft Rods -->
+            <div class="connecting-rod rod-left" id="rod-left"></div>
+            <div class="connecting-rod rod-right" id="rod-right"></div>
+            <!-- Central Golden Heart Engine -->
+            <div class="engine-heart-symbol" id="engine-heart">
+              <svg viewBox="0 0 60 60" class="engine-heart-svg">
+                <defs>
+                  <radialGradient id="heartGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#FF6B8B"/>
+                    <stop offset="60%" stop-color="#E11D48"/>
+                    <stop offset="100%" stop-color="#9F1239"/>
+                  </radialGradient>
+                </defs>
+                <path d="M30,50 C10,36 2,24 2,14 C2,6 8,0 16,0 C22,0 27,4 30,10 C33,4 38,0 44,0 C52,0 58,6 58,14 C58,24 50,36 30,50 Z" fill="url(#heartGrad)" stroke="#FDE68A" stroke-width="1.8"/>
+                <circle cx="30" cy="22" r="4" fill="#FFFFFF"/>
+              </svg>
+            </div>
+            <!-- Spark Emitter at Mesh Point -->
+            <div class="mesh-point" id="mesh-point">
+              <span class="sparkle-core">⚡</span>
+            </div>
+          </div>
+
+          <!-- Right Driven Gear: Sharun -->
+          <div class="gear-wrapper sharun-gear-wrap" id="sharun-gear-wrap">
+            <svg class="gear-svg" id="sharun-gear" viewBox="0 0 200 200">
+              <defs>
+                <linearGradient id="roseGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFE4E6"/>
+                  <stop offset="50%" stop-color="#F43F5E"/>
+                  <stop offset="100%" stop-color="#9F1239"/>
+                </linearGradient>
+              </defs>
+              <g class="gear-teeth-group" stroke="url(#roseGrad1)" stroke-width="2.2" fill="none">
+                <circle cx="100" cy="100" r="74" stroke="url(#roseGrad1)" stroke-width="3" fill="rgba(244, 63, 94, 0.1)"/>
+                <circle cx="100" cy="100" r="54" stroke="url(#roseGrad1)" stroke-width="1.5" stroke-dasharray="5,4"/>
+                <circle cx="100" cy="100" r="30" stroke="url(#roseGrad1)" stroke-width="2" fill="rgba(244, 63, 94, 0.25)"/>
+                <!-- Spoke Arms -->
+                <line x1="100" y1="26" x2="100" y2="174" stroke="url(#roseGrad1)" stroke-width="2"/>
+                <line x1="26" y1="100" x2="174" y2="100" stroke="url(#roseGrad1)" stroke-width="2"/>
+                <line x1="48" y1="48" x2="152" y2="152" stroke="url(#roseGrad1)" stroke-width="1.5"/>
+                <line x1="48" y1="152" x2="152" y2="48" stroke="url(#roseGrad1)" stroke-width="1.5"/>
+                <!-- 16 Precision Counter-Meshing Teeth -->
+                <path d="M 93 10 L 107 10 L 105 28 L 95 28 Z" fill="url(#roseGrad1)"/>
+                <path d="M 132 18 L 144 26 L 134 42 L 124 34 Z" fill="url(#roseGrad1)"/>
+                <path d="M 163 41 L 171 53 L 155 63 L 147 51 Z" fill="url(#roseGrad1)"/>
+                <path d="M 182 76 L 186 90 L 168 94 L 164 80 Z" fill="url(#roseGrad1)"/>
+                <path d="M 186 110 L 182 124 L 164 120 L 168 106 Z" fill="url(#roseGrad1)"/>
+                <path d="M 171 147 L 163 159 L 147 149 L 155 137 Z" fill="url(#roseGrad1)"/>
+                <path d="M 144 174 L 132 182 L 124 166 L 134 158 Z" fill="url(#roseGrad1)"/>
+                <path d="M 107 190 L 93 190 L 95 172 L 105 172 Z" fill="url(#roseGrad1)"/>
+                <path d="M 68 182 L 56 174 L 66 158 L 76 166 Z" fill="url(#roseGrad1)"/>
+                <path d="M 37 159 L 29 147 L 45 137 L 53 149 Z" fill="url(#roseGrad1)"/>
+                <path d="M 18 124 L 14 110 L 32 106 L 36 120 Z" fill="url(#roseGrad1)"/>
+                <path d="M 14 90 L 18 76 L 36 80 L 32 94 Z" fill="url(#roseGrad1)"/>
+                <path d="M 29 53 L 37 41 L 53 51 L 45 63 Z" fill="url(#roseGrad1)"/>
+                <path d="M 56 26 L 68 18 L 76 34 L 66 42 Z" fill="url(#roseGrad1)"/>
+              </g>
+              <circle cx="100" cy="100" r="16" fill="#0A1633" stroke="#F472B6" stroke-width="2"/>
+              <text x="100" y="104" text-anchor="middle" fill="#F472B6" font-family="'Cinzel', serif" font-size="11" font-weight="bold">SHARUN</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Live Engine Speed & Telemetry Controller -->
+        <div class="engine-controls-card">
+          <div class="engine-stats-grid">
+            <div class="stat-box">
+              <span class="stat-label">HEART ENGINE SPEED</span>
+              <span class="stat-val" id="engine-rpm-val">120 <small>BPM</small></span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-label">TORQUE EFFICIENCY</span>
+              <span class="stat-val">100% <small>ETERNAL</small></span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-label">MECHANICAL FRICTION</span>
+              <span class="stat-val">0.00 <small>COEFFICIENT</small></span>
+            </div>
+          </div>
+
+          <!-- Speed Selection Modes -->
+          <div class="speed-modes-row">
+            <button class="speed-mode-btn" data-speed="0.8" data-bpm="60" id="btn-mode-slow">🕯️ Gentle Romance (60 BPM)</button>
+            <button class="speed-mode-btn active" data-speed="1.8" data-bpm="120" id="btn-mode-sync">💖 Heartbeat Sync (120 BPM)</button>
+            <button class="speed-mode-btn" data-speed="3.5" data-bpm="240" id="btn-mode-fast">⚡ Overdrive Love (240 BPM)</button>
+          </div>
+        </div>
+
+        <div class="mechanical-statement">
+          <p class="eng-line-1">Two Mechanical Engineers.</p>
+          <p class="eng-line-2">Two Different Stories.</p>
+          <p class="eng-line-3">One Unbreakable Perpetual Engine of Love.</p>
+        </div>
+
+        <div class="technical-dimension-footer">
+          <span>MATERIAL: TITANIUM-BONDED FRIENDSHIP</span>
+          <span>TOLERANCE: PERFECT HARMONY (±0.00)</span>
+          <span>FACTOR OF SAFETY: ∞ (INFINITE)</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================== -->
+  <!-- CHAPTER 04: LOVE STORY TIMELINE (7.) -->
+  <!-- ================================================== -->
+  <section id="chapter-journey" class="story-chapter-section chapter-bg-warm">
+    <div class="chapter-container">
+      
+      <div class="chapter-header">
+        <span class="chapter-num">CHAPTER 04</span>
+        <h2 class="chapter-title">The Journey of Two Souls</h2>
+        <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+        <p class="chapter-subtitle">Every milestone that led them to forever</p>
+      </div>
+
+      <div class="vertical-timeline-wrapper">
+        <div class="timeline-central-gold-line"></div>
+
+        <!-- 01 THE FIRST MEETING -->
+        <div class="timeline-node" data-aos="fade-up">
+          <div class="node-number-badge">01</div>
+          <div class="node-card glass-panel">
+            <span class="node-tag">THE FIRST MEETING</span>
+            <h3 class="node-heading">G. Pulla Reddy Engineering College</h3>
+            <p class="node-desc">
+              Stepping into the Mechanical Engineering department, amidst blueprints, lab benches, and lectures, their paths crossed for the very first time.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02 THE FIRST CONVERSATION -->
+        <div class="timeline-node" data-aos="fade-up">
+          <div class="node-number-badge">02</div>
+          <div class="node-card glass-panel">
+            <span class="node-tag">THE FIRST CONVERSATION</span>
+            <h3 class="node-heading">A Simple “Hello”</h3>
+            <p class="node-desc">
+              “Sometimes the smallest ‘hello’ begins the biggest story.” A casual word exchanged during notes and project discussions sparked a genuine bond.
+            </p>
+          </div>
+        </div>
+
+        <!-- 03 FRIENDSHIP -->
+        <div class="timeline-node" data-aos="fade-up">
+          <div class="node-number-badge">03</div>
+          <div class="node-card glass-panel">
+            <span class="node-tag">FRIENDSHIP</span>
+            <h3 class="node-heading">Shared College Days</h3>
+            <p class="node-desc">
+              College days became better when they started sharing them. From walking across campus to celebrating small victories, friendship became second nature.
+            </p>
+          </div>
+        </div>
+
+        <!-- 04 THE REALIZATION -->
+        <div class="timeline-node" data-aos="fade-up">
+          <div class="node-number-badge">04</div>
+          <div class="node-card glass-panel">
+            <span class="node-tag">THE REALIZATION</span>
+            <h3 class="node-heading">Something Extraordinary</h3>
+            <p class="node-desc">
+              Somewhere along the journey, friendship gently transformed into something much deeper — an unspoken understanding and unwavering comfort.
+            </p>
+          </div>
+        </div>
+
+        <!-- 05 TOGETHER -->
+        <div class="timeline-node" data-aos="fade-up">
+          <div class="node-number-badge">05</div>
+          <div class="node-card glass-panel">
+            <span class="node-tag">TOGETHER</span>
+            <h3 class="node-heading">A Shared Decision</h3>
+            <p class="node-desc">
+              Two people decided to write the next chapter together with the blessings and love of their families, ready to turn friendship into a lifelong commitment.
+            </p>
+          </div>
+        </div>
+
+        <!-- 06 THE WEDDING -->
+        <div class="timeline-node" data-aos="fade-up">
+          <div class="node-number-badge">06</div>
+          <div class="node-card glass-panel">
+            <span class="node-tag">THE WEDDING</span>
+            <h3 class="node-heading">Pondicherry ❤️</h3>
+            <p class="node-desc">
+              Under the sacred arches of a serene church in coastal Pondicherry, they unite their lives, vows, and dreams before family and dear friends.
+            </p>
+          </div>
+        </div>
+
+        <!-- 07 FOREVER -->
+        <div class="timeline-node" data-aos="fade-up">
+          <div class="node-number-badge">07</div>
+          <div class="node-card glass-panel">
+            <span class="node-tag">FOREVER</span>
+            <h3 class="node-heading">A Beautiful Beginning</h3>
+            <p class="node-desc">
+              “And this is only the beginning…” A lifetime of adventures, shared laughter, and unconditional love awaits them.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================== -->
+  <!-- CHAPTER 05: NOSTALGIA & MEMORIES (16. & 8.) -->
+  <!-- ================================================== -->
+  <section id="chapter-memories" class="story-chapter-section chapter-bg-ivory">
+    <div class="chapter-container">
+      
+      <!-- 16. Friends & College Memories Section -->
+      <div class="college-corridors-block">
+        <div class="chapter-header">
+          <span class="chapter-num">COLLEGE NOSTALGIA</span>
+          <h2 class="chapter-title">From College Corridors to Wedding Bells</h2>
+          <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+          <p class="chapter-subtitle">Echoes of Mechanical Engineering days, workshops, laughter, and lifelong friendships</p>
+        </div>
+
+        <div class="college-aspects-grid">
+          <div class="aspect-card glass-panel">
+            <div class="aspect-icon">📚</div>
+            <h4>Lectures & Workshops</h4>
+            <p>From thermodynamics lectures to machine drawing sheets, every classroom memory brought them closer.</p>
+          </div>
+          <div class="aspect-card glass-panel">
+            <div class="aspect-icon">🏛️</div>
+            <h4>Campus Corridors</h4>
+            <p>G. Pulla Reddy campus pathways where casual hellos turned into heartfelt conversations.</p>
+          </div>
+          <div class="aspect-card glass-panel">
+            <div class="aspect-icon">👥</div>
+            <h4>Cherished Friends</h4>
+            <p>The friends and batchmates who witnessed the quiet smiles and supported their beautiful journey.</p>
+          </div>
+          <div class="aspect-card glass-panel">
+            <div class="aspect-icon">🎓</div>
+            <h4>Graduation & Beyond</h4>
+            <p>Carrying their degrees in hand and a lifelong bond in their hearts as they stepped into tomorrow.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Photo Memories Gallery with Replace/Upload Capability -->
+      <div class="photo-gallery-block" id="gallery-block">
+        <div class="chapter-header">
+          <span class="chapter-num">CHAPTER 05</span>
+          <h2 class="chapter-title">Our Memories</h2>
+          <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+          <p class="chapter-subtitle">A collection of moments that tell our story</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="gallery-filter-tabs" role="tablist">
+          <button class="filter-tab active" data-filter="all" role="tab">All Moments</button>
+          <button class="filter-tab" data-filter="college" role="tab">College Days</button>
+          <button class="filter-tab" data-filter="couple" role="tab">Couple</button>
+          <button class="filter-tab" data-filter="engagement" role="tab">Engagement</button>
+          <button class="filter-tab" data-filter="prewedding" role="tab">Pre-Wedding</button>
+          <button class="filter-tab" data-filter="family" role="tab">Family & Friends</button>
+          <button class="filter-tab" data-filter="wedding" role="tab">Wedding</button>
+        </div>
+
+        <!-- Easy Photo Customizer Notice & Action -->
+        <div class="gallery-replace-hint">
+          <span class="hint-text">✨ Elegant Photo Placeholders. Have real photos of Prajwal & Sharun?</span>
+          <button class="btn btn-sm-gold" id="open-photo-manager-btn">📷 Customize / Add Real Photos</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+          
+          <!-- Card 1: College -->
+          <div class="gallery-card" data-category="college" data-id="photo-1">
+            <div class="photo-frame">
+              <div class="placeholder-art college-art">
+                <div class="art-icon">🏛️</div>
+                <div class="art-title">College Memory</div>
+                <div class="art-sub">G. Pulla Reddy Mechanical Block</div>
+              </div>
+              <img class="real-photo" src="" alt="College Memory" style="display: none;">
+              <div class="photo-overlay">
+                <span class="view-zoom-icon">🔍</span>
+                <span class="photo-caption">G. Pulla Reddy Campus Days</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span class="footer-tag">College Memory</span>
+              <button class="btn-replace-photo" onclick="window.triggerPhotoReplace('photo-1', 'College Memory')">Replace Photo</button>
+            </div>
+          </div>
+
+          <!-- Card 2: Couple -->
+          <div class="gallery-card" data-category="couple" data-id="photo-2">
+            <div class="photo-frame">
+              <div class="placeholder-art couple-art">
+                <div class="art-icon">💍</div>
+                <div class="art-title">Prajwal & Sharun</div>
+                <div class="art-sub">A Special Connection</div>
+              </div>
+              <img class="real-photo" src="" alt="Prajwal and Sharun" style="display: none;">
+              <div class="photo-overlay">
+                <span class="view-zoom-icon">🔍</span>
+                <span class="photo-caption">Two Hearts as One</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span class="footer-tag">Couple Moments</span>
+              <button class="btn-replace-photo" onclick="window.triggerPhotoReplace('photo-2', 'Couple Photo')">Replace Photo</button>
+            </div>
+          </div>
+
+          <!-- Card 3: Engagement -->
+          <div class="gallery-card" data-category="engagement" data-id="photo-3">
+            <div class="photo-frame">
+              <div class="placeholder-art engagement-art">
+                <div class="art-icon">✨</div>
+                <div class="art-title">Engagement Moment</div>
+                <div class="art-sub">The Promise of Forever</div>
+              </div>
+              <img class="real-photo" src="" alt="Engagement" style="display: none;">
+              <div class="photo-overlay">
+                <span class="view-zoom-icon">🔍</span>
+                <span class="photo-caption">A Beautiful Promise</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span class="footer-tag">Engagement</span>
+              <button class="btn-replace-photo" onclick="window.triggerPhotoReplace('photo-3', 'Engagement Photo')">Replace Photo</button>
+            </div>
+          </div>
+
+          <!-- Card 4: Pre-wedding -->
+          <div class="gallery-card" data-category="prewedding" data-id="photo-4">
+            <div class="photo-frame">
+              <div class="placeholder-art prewedding-art">
+                <div class="art-icon">🌊</div>
+                <div class="art-title">Pre-Wedding Story</div>
+                <div class="art-sub">Pondicherry Coastal Breezes</div>
+              </div>
+              <img class="real-photo" src="" alt="Pre-wedding" style="display: none;">
+              <div class="photo-overlay">
+                <span class="view-zoom-icon">🔍</span>
+                <span class="photo-caption">Serenade by the Shore</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span class="footer-tag">Pre-Wedding</span>
+              <button class="btn-replace-photo" onclick="window.triggerPhotoReplace('photo-4', 'Pre-Wedding Photo')">Replace Photo</button>
+            </div>
+          </div>
+
+          <!-- Card 5: Family & Friends -->
+          <div class="gallery-card" data-category="family" data-id="photo-5">
+            <div class="photo-frame">
+              <div class="placeholder-art family-art">
+                <div class="art-icon">👨‍👩‍👧‍👦</div>
+                <div class="art-title">Friends & Family</div>
+                <div class="art-sub">Blessings & Shared Smiles</div>
+              </div>
+              <img class="real-photo" src="" alt="Friends and Family" style="display: none;">
+              <div class="photo-overlay">
+                <span class="view-zoom-icon">🔍</span>
+                <span class="photo-caption">Loved Ones Together</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span class="footer-tag">Family & Friends</span>
+              <button class="btn-replace-photo" onclick="window.triggerPhotoReplace('photo-5', 'Family & Friends Photo')">Replace Photo</button>
+            </div>
+          </div>
+
+          <!-- Card 6: Wedding Day -->
+          <div class="gallery-card" data-category="wedding" data-id="photo-6">
+            <div class="photo-frame">
+              <div class="placeholder-art wedding-art">
+                <div class="art-icon">⛪</div>
+                <div class="art-title">Church Wedding</div>
+                <div class="art-sub">Sacred Vows in Pondicherry</div>
+              </div>
+              <img class="real-photo" src="" alt="Wedding Day" style="display: none;">
+              <div class="photo-overlay">
+                <span class="view-zoom-icon">🔍</span>
+                <span class="photo-caption">Together Forever</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span class="footer-tag">Wedding Day</span>
+              <button class="btn-replace-photo" onclick="window.triggerPhotoReplace('photo-6', 'Wedding Photo')">Replace Photo</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================== -->
+  <!-- CHAPTER 06: WEDDING ANNOUNCEMENT & CHURCH (9. 10. 11. 12. 13.) -->
+  <!-- ================================================== -->
+  <section id="chapter-wedding" class="story-chapter-section chapter-bg-church">
+    <div class="chapter-container">
+      
+      <!-- 9. Wedding Announcement: Save the Date -->
+      <div class="save-the-date-card glass-panel">
+        <span class="save-tag">SAVE THE DATE</span>
+        <h2 class="save-title">JAMMULA PRAJWAL SAI</h2>
+        <div class="save-ampersand">&amp;</div>
+        <h2 class="save-title">SHARUN</h2>
+        <p class="save-declaration">ARE GETTING MARRIED</p>
+
+        <div class="countdown-module" id="countdown-module">
+          <!-- When date is not set or placeholder -->
+          <div class="date-status-card" id="date-status-banner">
+            <div class="calendar-icon">📅</div>
+            <h3 class="date-highlight-text" id="wedding-date-display">Friday, December 25, 2026</h3>
+            <p class="date-subtext">Mark your calendars for our special day in Pondicherry!</p>
+            <button class="btn btn-sm-gold-outline" id="set-date-btn">⚙️ Adjust / Preview Date Details</button>
+          </div>
+
+          <!-- Countdown Grid (active when date is configured) -->
+          <div class="countdown-timer-grid" id="countdown-timer-grid" style="display: flex;">
+            <div class="time-box">
+              <span class="time-val" id="days-val">00</span>
+              <span class="time-unit">DAYS</span>
+            </div>
+            <div class="time-colon">:</div>
+            <div class="time-box">
+              <span class="time-val" id="hours-val">00</span>
+              <span class="time-unit">HOURS</span>
+            </div>
+            <div class="time-colon">:</div>
+            <div class="time-box">
+              <span class="time-val" id="minutes-val">00</span>
+              <span class="time-unit">MINUTES</span>
+            </div>
+            <div class="time-colon">:</div>
+            <div class="time-box">
+              <span class="time-val" id="seconds-val">00</span>
+              <span class="time-unit">SECONDS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Church Wedding Details Section -->
+      <div class="church-wedding-showcase">
+        <div class="church-arch-decor">
+          <svg viewBox="0 0 120 60" class="arch-svg" aria-hidden="true">
+            <path d="M10 60 L10 30 Q60 -10 110 30 L110 60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M20 60 L20 32 Q60 2 100 32 L100 60" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3,3"/>
+          </svg>
+        </div>
+
+        <div class="church-header-box">
+          <span class="church-tag">CHURCH WEDDING CEREMONY</span>
+          <h2 class="church-main-title">Together, Forever.</h2>
+          <p class="church-quote">“With love in their hearts, they begin the next chapter of their journey.”</p>
+        </div>
+
+        <div class="church-details-grid">
+          
+          <div class="church-info-card glass-panel">
+            <div class="card-icon">📍</div>
+            <h4>LOCATION</h4>
+            <p class="detail-value">PONDICHERRY / PUDUCHERRY</p>
+            <span class="detail-note">The serene French coastal haven</span>
+          </div>
+
+          <div class="church-info-card glass-panel highlight-card">
+            <div class="card-icon">⛪</div>
+            <h4>CHURCH VENUE</h4>
+            <p class="detail-value" id="church-name-display">Basilica of the Sacred Heart of Jesus</p>
+            <span class="detail-note">South Boulevard, Pondicherry</span>
+          </div>
+
+          <div class="church-info-card glass-panel">
+            <div class="card-icon">🗓️</div>
+            <h4>WEDDING DATE</h4>
+            <p class="detail-value" id="church-date-display">December 25, 2026</p>
+            <span class="detail-note">Sacred Christmas Wedding Day</span>
+          </div>
+
+          <div class="church-info-card glass-panel">
+            <div class="card-icon">⏰</div>
+            <h4>WEDDING TIME</h4>
+            <p class="detail-value" id="church-time-display">10:00 AM IST</p>
+            <span class="detail-note">Solemn Holy Matrimony</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 12. Pondicherry Visual Experience & 11. Wedding Venue Card -->
+      <div class="pondicherry-experience-card glass-panel">
+        <div class="pondy-decor-badge">
+          <span>COASTAL DESTINATION</span>
+        </div>
+        <div class="pondy-content-wrap">
+          <div class="pondy-text">
+            <h3>The Pondicherry Experience</h3>
+            <p>
+              Where colonial French pastel corridors meet the gentle sound of the Bay of Bengal. 
+              Pondicherry’s sacred church bells, sun-kissed bougainvillea, and timeless charm provide the perfect backdrop for Prajwal & Sharun's eternal vows.
+            </p>
+            <div class="venue-action-buttons">
+              <a href="#pondicherry-map-modal" class="btn btn-luxury-primary" id="open-venue-modal-btn">
+                <span>VIEW LOCATION</span>
+              </a>
+              <a href="https://www.google.com/maps/search/Pondicherry+churches" target="_blank" rel="noopener noreferrer" class="btn btn-luxury-outline">
+                <span>GET DIRECTIONS ↗</span>
+              </a>
+            </div>
+          </div>
+          <div class="pondy-scenery-visual">
+            <div class="coastal-illustration">
+              <div class="sun-glow"></div>
+              <div class="church-silhouette">⛪</div>
+              <div class="palm-silhouette">🌴</div>
+              <div class="wave-lines">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="location-caption">Pondicherry / Puducherry</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13. Wedding Day Schedule -->
+      <div class="wedding-schedule-block">
+        <div class="chapter-header">
+          <span class="chapter-num">THE ITINERARY</span>
+          <h2 class="chapter-title">The Wedding Day Schedule</h2>
+          <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+          <p class="chapter-subtitle">A celebration of vows, joy, blessings, and feast</p>
+        </div>
+
+        <div class="schedule-timeline">
+          
+          <div class="schedule-item">
+            <div class="schedule-time-badge">[Time]</div>
+            <div class="schedule-card glass-panel">
+              <div class="event-icon">🌸</div>
+              <h4>Guest Arrival & Welcome</h4>
+              <p>Guests gather at the church venue with refreshing welcome drinks and warm smiles.</p>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time-badge">[Time]</div>
+            <div class="schedule-card glass-panel">
+              <div class="event-icon">🕊️</div>
+              <h4>Holy Wedding Ceremony & Vows</h4>
+              <p>The sacred church service, exchange of rings, blessings, and solemnization of marriage.</p>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time-badge">[Time]</div>
+            <div class="schedule-card glass-panel">
+              <div class="event-icon">📸</div>
+              <h4>Photography & Group Portraits</h4>
+              <p>Capturing timeless memories with family, friends, college batchmates, and well-wishers.</p>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time-badge">[Time]</div>
+            <div class="schedule-card glass-panel">
+              <div class="event-icon">🥂</div>
+              <h4>Reception & Joyous Celebration</h4>
+              <p>Toasts, heartfelt speeches, music, cake cutting, and joyous dances.</p>
+            </div>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time-badge">[Time]</div>
+            <div class="schedule-card glass-panel">
+              <div class="event-icon">🍽️</div>
+              <h4>Grand Wedding Dinner Feast</h4>
+              <p>A sumptuous dinner celebration honoring the newlyweds and sharing gratitude with all guests.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 14. RSVP Section -->
+      <div class="rsvp-wrapper-section" id="rsvp-section">
+        <div class="chapter-header">
+          <span class="chapter-num">CONFIRM ATTENDANCE</span>
+          <h2 class="chapter-title">RSVP</h2>
+          <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+          <p class="chapter-subtitle">Kindly celebrate with us by letting us know your presence</p>
+        </div>
+
+        <div class="rsvp-card glass-panel">
+          <form id="rsvp-form" class="rsvp-form" novalidate>
+            
+            <div class="form-group">
+              <label for="rsvp-name" class="form-label">Full Name <span class="required-star">*</span></label>
+              <input type="text" id="rsvp-name" name="fullName" class="form-input" placeholder="Enter your full name" required>
+              <span class="error-msg" id="name-error">Please enter your full name.</span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="rsvp-guests" class="form-label">Number of Guests <span class="required-star">*</span></label>
+                <select id="rsvp-guests" name="guests" class="form-select" required>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5+ Guests</option>
+                </select>
+              </div>
+
+              <div class="form-group col-half">
+                <label class="form-label">Will You Attend? <span class="required-star">*</span></label>
+                <div class="radio-pill-group">
+                  <label class="radio-pill">
+                    <input type="radio" name="attending" value="yes" checked>
+                    <span class="pill-text">Joyfully Attending (YES)</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="attending" value="no">
+                    <span class="pill-text">Regretfully Decline (NO)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvp-message" class="form-label">Message for Prajwal & Sharun</label>
+              <textarea id="rsvp-message" name="message" class="form-textarea" rows="4" placeholder="Write a warm note or blessing for the couple..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-luxury-primary btn-block" id="rsvp-submit-btn">
+              <span>SEND RSVP</span>
+            </button>
+          </form>
+
+          <!-- Success Alert Card -->
+          <div class="rsvp-success-state" id="rsvp-success-state" style="display: none;">
+            <div class="success-icon">💌</div>
+            <h3>Thank you! Your response has been received. ❤️</h3>
+            <p>We are delighted and truly look forward to celebrating this sacred beginning with you.</p>
+            <button class="btn btn-sm-gold" id="reset-rsvp-btn">Submit Another Response</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15. Wishes for the Couple Section -->
+      <div class="wishes-section" id="wishes-section">
+        <div class="chapter-header">
+          <span class="chapter-num">GUESTBOOK</span>
+          <h2 class="chapter-title">Leave Them Some Love</h2>
+          <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+          <p class="chapter-subtitle">Send a heartfelt wedding wish to Prajwal & Sharun</p>
+        </div>
+
+        <div class="wishes-interactive-layout">
+          <!-- Submission Box -->
+          <div class="wishes-form-card glass-panel">
+            <h3>Share Your Blessings</h3>
+            <form id="wish-form">
+              <div class="form-group">
+                <label for="wish-author" class="form-label">Your Name</label>
+                <input type="text" id="wish-author" class="form-input" placeholder="Your Name or Family Name" required>
+              </div>
+              <div class="form-group">
+                <label for="wish-content" class="form-label">Your Wedding Wish</label>
+                <textarea id="wish-content" class="form-textarea" rows="3" placeholder="Wishing you both a lifetime of happiness, love and adventure..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-luxury-primary">Send Love & Wish ❤️</button>
+              <p class="moderation-notice">✨ Wishes are warmly received and reviewed before publishing.</p>
+            </form>
+          </div>
+
+          <!-- Approved Wishes Display Grid -->
+          <div class="wishes-display-grid" id="wishes-display-grid">
+            
+            <div class="wish-card glass-panel">
+              <div class="wish-quote-icon">“</div>
+              <p class="wish-text">“Wishing you both a lifetime filled with happiness, understanding, and beautiful memories from college days to forever.”</p>
+              <div class="wish-footer">
+                <span class="wish-sender">— Mechanical Batchmate & Friends</span>
+                <span class="wish-heart">❤️</span>
+              </div>
+            </div>
+
+            <div class="wish-card glass-panel">
+              <div class="wish-quote-icon">“</div>
+              <p class="wish-text">“May your love story continue to grow stronger with every passing day. God bless your new beginning in Pondicherry!”</p>
+              <div class="wish-footer">
+                <span class="wish-sender">— Dear Family & Well-Wishers</span>
+                <span class="wish-heart">✨</span>
+              </div>
+            </div>
+
+            <div class="wish-card glass-panel">
+              <div class="wish-quote-icon">“</div>
+              <p class="wish-text">“From engineering drawings to the greatest blueprint of life — true love. Congratulations Prajwal & Sharun!”</p>
+              <div class="wish-footer">
+                <span class="wish-sender">— GPREC Class of Mechanical</span>
+                <span class="wish-heart">💍</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================== -->
+  <!-- CHAPTER 07: SPECIAL FINAL ANIMATION (18.) -->
+  <!-- ================================================== -->
+  <section id="chapter-forever" class="story-chapter-section chapter-bg-forever">
+    <div class="chapter-container">
+      
+      <div class="chapter-header light-text">
+        <span class="chapter-num gold-text">CHAPTER 07</span>
+        <h2 class="chapter-title">Forever & Always</h2>
+        <div class="chapter-divider"><span class="gold-diamond">◆</span></div>
+      </div>
+
+      <div class="forever-animation-container">
+        <!-- Two separate converging lines forming the infinity symbol -->
+        <div class="infinity-converge-stage" id="infinity-stage">
+          
+          <svg class="infinity-anim-svg" viewBox="0 0 400 200">
+            <defs>
+              <linearGradient id="goldBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#edd188"/>
+                <stop offset="50%" stop-color="#dfb13f"/>
+                <stop offset="100%" stop-color="#fff8e7"/>
+              </linearGradient>
+              <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="4" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Line 1: Prajwal Journey -->
+            <path class="journey-line prajwal-line" d="M 40 100 C 40 20, 160 20, 200 100 C 240 180, 360 180, 360 100" fill="none" stroke="url(#goldBeam)" stroke-width="3" filter="url(#goldGlow)"/>
+            
+            <!-- Line 2: Sharun Journey -->
+            <path class="journey-line sharun-line" d="M 360 100 C 360 20, 240 20, 200 100 C 160 180, 40 180, 40 100" fill="none" stroke="url(#goldBeam)" stroke-width="3" filter="url(#goldGlow)"/>
+          </svg>
+
+          <div class="infinity-center-emblem">
+            <span class="glowing-symbol">∞</span>
+          </div>
+        </div>
+
+        <div class="forever-names-wrap">
+          <h2 class="forever-title">PRAJWAL <span class="gold-inf">∞</span> SHARUN</h2>
+          <p class="forever-subtitle">“From this day forward.”</p>
+        </div>
+
+        <div class="forever-blessing-text">
+          <p>
+            Two paths that converged into one unending promise of joy, love, and eternal companionship.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================== -->
+  <!-- 19. WEBSITE TEAM CREDITS -->
+  <!-- ================================================== -->
+  <section class="team-credits-section">
+    <div class="team-container">
+      <div class="credits-crest">
+        <span class="crest-dot">✦</span>
+        <span class="crest-text">CREATED WITH ❤️ FOR PRAJWAL & SHARUN</span>
+        <span class="crest-dot">✦</span>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <span class="team-role">FOUNDER</span>
+          <span class="team-name">PETLU VIJAY</span>
+        </div>
+
+        <div class="team-divider">|</div>
+
+        <div class="team-card">
+          <span class="team-role">CEO</span>
+          <span class="team-name">SHASHI KANTA</span>
+        </div>
+
+        <div class="team-divider">|</div>
+
+        <div class="team-card">
+          <span class="team-role">CONTENT CREATOR</span>
+          <span class="team-name">YASHWANTH REDDY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================== -->
+  <!-- 20. FOOTER -->
+  <!-- ================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-monogram">P &amp; S</div>
+      <h3 class="footer-couple-name">PRAJWAL &amp; SHARUN</h3>
+      <p class="footer-quote">“Our Story Continues…”</p>
+      <p class="footer-location">Pondicherry, Puducherry</p>
+      
+      <div class="footer-love-badge">
+        <span>Made with ❤️ for their beautiful beginning.</span>
+      </div>
+
+      <div class="footer-team-inline">
+        Founder — Petlu Vijay &nbsp;•&nbsp; CEO — Shashi Kanta &nbsp;•&nbsp; Content Creator — Yashwanth Reddy
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2026 Jammula Prajwal Sai &amp; Sharun Wedding. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================== -->
+  <!-- MODALS: Lightbox, Photo Customizer, Date Config -->
+  <!-- ================================================== -->
+
+  <!-- Lightbox Modal -->
+  <div class="modal-backdrop" id="lightbox-modal" aria-hidden="true">
+    <div class="lightbox-content">
+      <button class="modal-close-btn" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-media-container" id="lightbox-media"></div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Photo Replacement / Upload Modal -->
+  <div class="modal-backdrop" id="photo-manager-modal" aria-hidden="true">
+    <div class="modal-dialog glass-panel">
+      <button class="modal-close-btn" id="photo-modal-close" aria-label="Close Dialog">&times;</button>
+      <h3 class="modal-title">Customize Photo</h3>
+      <p class="modal-desc" id="photo-modal-target-title">Replace photo placeholder with your real memory</p>
+      
+      <div class="photo-upload-options">
+        <div class="upload-dropzone" id="upload-dropzone">
+          <span class="upload-icon">📁</span>
+          <p>Click to choose an image or drag &amp; drop here</p>
+          <input type="file" id="photo-file-input" accept="image/*" class="sr-only">
+        </div>
+
+        <div class="or-divider"><span>OR ENTER IMAGE URL</span></div>
+
+        <div class="form-group">
+          <input type="url" id="photo-url-input" class="form-input" placeholder="https://example.com/photo.jpg">
+        </div>
+
+        <div class="modal-action-buttons">
+          <button class="btn btn-luxury-primary" id="save-photo-btn">Save Photo</button>
+          <button class="btn btn-luxury-outline" id="reset-to-placeholder-btn">Reset to Placeholder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wedding Date Configurator Modal -->
+  <div class="modal-backdrop" id="date-config-modal" aria-hidden="true">
+    <div class="modal-dialog glass-panel">
+      <button class="modal-close-btn" id="date-modal-close" aria-label="Close Dialog">&times;</button>
+      <h3 class="modal-title">Set Official Wedding Details</h3>
+      <p class="modal-desc">Enter the confirmed date, church venue, and timings</p>
+      
+      <form id="date-config-form">
+        <div class="form-group">
+          <label for="input-wedding-date" class="form-label">Wedding Date &amp; Time</label>
+          <input type="datetime-local" id="input-wedding-date" class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label for="input-church-name" class="form-label">Church Name (Pondicherry)</label>
+          <input type="text" id="input-church-name" class="form-input" placeholder="e.g. Basilica of the Sacred Heart of Jesus">
+        </div>
+
+        <div class="form-group">
+          <label for="input-ceremony-time" class="form-label">Ceremony Time</label>
+          <input type="text" id="input-ceremony-time" class="form-input" placeholder="e.g. 10:30 AM IST">
+        </div>
+
+        <div class="modal-action-buttons">
+          <button type="submit" class="btn btn-luxury-primary">Apply Details &amp; Activate Countdown</button>
+          <button type="button" class="btn btn-luxury-outline" id="clear-date-btn">Clear / Reset to Coming Soon</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Location Map Modal -->
+  <div class="modal-backdrop" id="pondicherry-map-modal" aria-hidden="true">
+    <div class="modal-dialog glass-panel modal-lg">
+      <button class="modal-close-btn" id="map-modal-close" aria-label="Close Map">&times;</button>
+      <h3 class="modal-title">Pondicherry Destination Overview</h3>
+      <p class="modal-desc">The French Riviera of the East — Wedding Destination</p>
+      <div class="map-embed-container">
+        <iframe 
+          title="Pondicherry Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124974.20524451717!2d79.74900898517227!3d11.936458316131435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361ab8e49cfcf%3A0xcc6bd326d2f0b04e!2sPuducherry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="350" 
+          style="border:0; border-radius: 8px;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="modal-footer-notes">
+        <p>Exact Church map coordinates will be pinned here once the specific parish is announced.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/gears.js"></script>
+  <script src="js/story.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/rsvp.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
